@@ -175,7 +175,6 @@ print(df.loc['Serbia', 'gdpPercap_2007'])
 
 ## Exercise 2.3
 
-Practice with Selection
 Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded. Write an expression to select each of the following:
 
 1. GDP per capita for all countries in 1982.
