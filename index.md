@@ -25,6 +25,11 @@ age = age - 20
 <br>
 </details>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 1.2
 
@@ -42,6 +47,12 @@ print(third, fourth)
 
 Hopper Grace
 </details>
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 1.3
 
@@ -66,19 +77,39 @@ type(distance)
 <br>
 </details>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ## The Data
 ```
 "continent","country","gdpPercap_1952","gdpPercap_1957","gdpPercap_1962","gdpPercap_1967","gdpPercap_1972","gdpPercap_1977","gdpPercap_1982","gdpPercap_1987","gdpPercap_1992","gdpPercap_1997","gdpPercap_2002","gdpPercap_2007","lifeExp_1952","lifeExp_1957","lifeExp_1962","lifeExp_1967","lifeExp_1972","lifeExp_1977","lifeExp_1982","lifeExp_1987","lifeExp_1992","lifeExp_1997","lifeExp_2002","lifeExp_2007","pop_1952","pop_1957","pop_1962","pop_1967","pop_1972","pop_1977","pop_1982","pop_1987","pop_1992","pop_1997","pop_2002","pop_2007"
 "Africa","Algeria",2449.008185,3013.976023,2550.81688,3246.991771,4182.663766,4910.416756,5745.160213,5681.358539,5023.216647,4797.295051,5288.040382,6223.367465,43.077,45.685,48.303,51.407,54.518,58.014,61.368,65.799,67.744,69.152,70.994,72.301,9279525,10270856,11000948,12760499,14760787,17152804,20033753,23254956,26298373,29072015,31287142,33333216
 "Africa","Angola",3520.610273,3827.940465,4269.276742,5522.776375,5473.288005,3008.647355,2756.953672,2430.208311,2627.845685,2277.140884,2773.287312,4797.231267,30.015,31.999,34,35.985,37.928,39.483,39.942,39.906,40.647,40.963,41.003,42.731,4232095,4561361,4826015,5247469,5894858,6162675,7016384,7874230,8735988,9875024,10866106,12420476
 ```
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ![Data table](fig/excelGrab.PNG)
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Selecting Values
 
 ![Data access](fig/accessData.PNG)
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 2.1: Slicing strings
 We can take sections (or slices) of strings as well. Note here that the second index is not inclusive.
@@ -100,11 +131,11 @@ What are the values of `element[:4]`, `element[4:]` and `element[:]`?
 <summary>Solution
 </summary>
 
-element[:4] = oxyg
+`element[:4] = oxyg`
 <br>
-element[4:] = en
+`element[4:] = en`
 <br>
-element[:] = oxygen
+`element[:] = oxygen`
 
 </details>
 <br>
@@ -116,9 +147,9 @@ What is `element[-1]` and `element[-2]`?
 <summary>Solution
 </summary>
 
-n
+`n`
 
-e
+`e`
 
 </details>
 
@@ -130,7 +161,7 @@ Given those answers, explain what element[1:-1] does.
 <summary>Solution
 </summary>
 
-element[1:-1] = xyge
+`element[1:-1]` = `xyge`
 <br>
 Creates a substring from index 1 up to (not including) the final index, effectively removing the first and last letters from ‘oxygen’
 
@@ -148,9 +179,14 @@ Test your solution with the following strings: `carpentry`, `clone`, `hi`.
 <summary>Solution
 </summary>
 
-element[3:6] becomes element[-3:]
+`element[3:6]` becomes `element[-3:]`
 
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 2.2
 Assume Pandas has been imported into your notebook and the Gapminder GDP data for Europe has been loaded:
@@ -169,9 +205,14 @@ Write an expression to find the Per Capita GDP of Serbia in 2007.
 
 The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap_2007"):
 
-print(df.loc['Serbia', 'gdpPercap_2007'])
+`print(df.loc['Serbia', 'gdpPercap_2007'])`
 
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 2.3
 
@@ -186,18 +227,23 @@ Assume Pandas has been imported and the Gapminder GDP data for Europe has been l
 </summary>
 
 1:
-data['gdpPercap_1982']
+`data['gdpPercap_1982']`
 
 2:
-data.loc['Denmark',:]
+`data.loc['Denmark',:]`
 
 
 3:
-data['gdpPercap_2007']/data['gdpPercap_1952']
+`data['gdpPercap_2007']/data['gdpPercap_1952']`
 
 
 </details>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
@@ -217,17 +263,20 @@ plt.xticks(rotation=90)
 <summary>Solution
 </summary>
 
+```python
 data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
-<br>
 data_europe.min().plot(label='min')
-<br>
 data_europe.max().plot(label='max')
-<br>
 plt.legend(loc='best')
-<br>
 plt.xticks(rotation=90)
-<br>
+```
+
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 ## Exercise 3.2
@@ -243,15 +292,20 @@ Using online help and other resources, explain what each argument to plot does.
 <details>
 <summary>Solution
 </summary>
-https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html
+`https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html`
 <br>
-kind - As seen already this determines the kind of plot to be drawn.
+`kind` - As seen already this determines the kind of plot to be drawn.
 <br>
-x and y - A column name or index that determines what data will be placed on the x and y axes of the plot
+`x` and `y` - A column name or index that determines what data will be placed on the x and y axes of the plot
 <br>
-s - Details for this can be found in the documentation of plt.scatter. A single number or one value for each data point. Determines the size of the plotted points. 
+`s` - Details for this can be found in the documentation of plt.scatter. A single number or one value for each data point. Determines the size of the plotted points. 
 <br>
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 ## Exercise 4.1 Computing powers with loops
@@ -264,10 +318,20 @@ Can you write a loop that would do the same? You may want to use `range`
 <summary>Solution
 </summary>
 
-<img src="fig/ex4.1.PNG">
+```python
+result = 1
+for number in range(0,3):
+    result = result * 5
+print(result)
+```
 
 
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 4.2 Reverse a string
 Two strings can be concatenated using `+` e.g. `'take' + 'away'` would give `'takeaway'`. Write a loop that takes a string and produces a new string with the characters in reverse order so `Newton` becomes `notweN`.
@@ -278,7 +342,13 @@ Hint: create two variables, one for the new string and one for the original. Con
 <summary>Solution
 </summary>
 
-<img src="fig/ex4.2.PNG">
+```python
+newstring = ''
+oldstring = 'Newton'
+for char in oldstring:
+    newstring = char + newstring
+print(newstring)
+```
 
 
 </details>
@@ -292,9 +362,19 @@ Hint: Before your for loop, create an empty list to add characters to like this:
 <summary>Solution
 </summary>
 
-<img src="fig/ex5.1.PNG">
+```python
+my_list = []
+for char in 'hello':
+    my_list.append(char)
+print(my_list)
+```
 
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 5.2 Slicing from the end
 You want to access the last 2 characters of this string and the last 2 entries in this list using the same square brackets. What would need to go inside the square brackets?
@@ -310,8 +390,14 @@ lst[?:?]
 <details>
 <summary>Solution
 </summary>
-[-2:]
+
+`[-2:]`
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 5.3 Non-continuous slices
 You can include a third argument inside the square brackets to set the step size and only take every nth element from the list.
@@ -331,7 +417,8 @@ How would you get every other element, starting from the second element? i.e.  `
 <details>
 <summary>Solution
 </summary>
-primes[1::2]
+
+`primes[1::2]`
 </details>
 
 <br>
@@ -341,6 +428,11 @@ primes[1::2]
 
 ![comparisons](fig/comparisons.PNG)
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 7.1 How many paths?
 
@@ -366,8 +458,14 @@ What would be printed?
 <details>
 <summary>Solution
 </summary>
+
 C gets printed because none of the other statements are true
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 7.2 What is truth?
 `True` and `False` are not the only values in Python that are true and false. Run the following code to see what happens.
@@ -394,6 +492,11 @@ Zero, the empty string, and the empty list are considered false; all other numbe
 
 </details>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 7.3 Counting vowels
 Write a loop that counts the number of vowels in a character string. Test it on as many different words and sentences as you have time for.
@@ -402,19 +505,38 @@ Write a loop that counts the number of vowels in a character string. Test it on 
 <summary>Solution
 </summary>
 
-<img src="fig/ex7.2.PNG">
+```python
+vowels = 'aeiouAEIOU'
+sentence = 'Mary had a little lamb.'
+count = 0
+for char in sentence:
+    if char in vowels:
+        count += 1
+
+print('The number of vowewls in this string is ' + str(count))
+```
 
 </details>
 
 <br>
 <br>
+<br>
+<br>
+<br>
+
+
 ## Episode 8 Creating Functions
 
 
 ![Function demo](fig/functionDemo.PNG)
 
 <br>
-<br>
+<br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 ## Exercise 8.1 Combining strings
 “Adding” two strings produces their concatenation: `a + b` is `ab` .  
 
@@ -430,8 +552,17 @@ print(fence('name', '*'))
 <details>
 <summary>Solution
 </summary>
-<img src="fig/ex8.1.PNG">
+
+```python
+def fence(original, wrapper):
+    return wrapper + original + wrapper
+```
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 8.2 Return versus print
 Note that return and print are not interchangeable. `print` is a Python function that prints data to the screen. It enables us to see the data. A `return` statement makes data visible to the program. Let’s have a look at the following function:
@@ -452,13 +583,21 @@ print(A)
 <details>
 <summary>Solution
 </summary>
-Python will first execute the function add with a = 7 and b = 3, and, therefore, print 10. However, because function add does not have a line that starts with return (no return “statement”), it will, by default, return nothing which, in Python world, is called None. Therefore, A will be assigned to None and the last line (print(A)) will print None. As a result, we will see:
-<br>
+
+Python will first execute the function add with a = 7 and b = 3, and, therefore, print 10. However, because function add does not have a line that starts with return (no return “statement”), it will, by default, return nothing which, in Python world, is called None. Therefore, A will be assigned to None and the last line (`print(A)`) will print None. As a result, we will see:
+
+```python
 10
-<br>
 None
+```
+``
 
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Exercise 8.3 Mixing default and non-default parameters
 ```python
@@ -506,5 +645,103 @@ What result is correct?
 </summary>
 
 3. a and b are assigned and c is default.
+
+</details>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## Exercise 9.1 Reading error message
+Read the Python code and the resulting traceback below, and answer the following questions:
+
+1. How many levels does the traceback have?
+2. What is the function name where the error occurred?
+3. On which line number in this function did the error occur?
+4. What is the type of error?
+5. Is there an error message?
+
+
+```python
+def print_message(day):
+    messages = {
+        'monday': 'Hello, world!',
+        'tuesday': 'Today is Tuesday!',
+        'wednesday': 'It is the middle of the week.',
+        'thursday': 'Today is Donnerstag in German!',
+        'friday': 'Last day of the week!',
+        'saturday': 'Hooray for the weekend!',
+        'sunday': 'Aw, the weekend is almost over.'
+    }
+    print(messages[day])
+
+def print_friday_message():
+    print_message('Friday')
+
+print_friday_message()
+```
+
+```python
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+<ipython-input-1-4be1945adbe2> in <module>()
+     14     print_message('Friday')
+     15
+---> 16 print_friday_message()
+
+<ipython-input-1-4be1945adbe2> in print_friday_message()
+     12
+     13 def print_friday_message():
+---> 14     print_message('Friday')
+     15
+     16 print_friday_message()
+
+<ipython-input-1-4be1945adbe2> in print_message(day)
+      9         'sunday': 'Aw, the weekend is almost over.'
+     10     }
+---> 11     print(messages[day])
+     12
+     13 def print_friday_message():
+
+KeyError: 'Friday'
+```
+
+<details>
+<summary>Solution
+</summary>
+
+<ol>
+<li>3 levels </li>
+<li>print_message</li>
+<li>11</li>
+<li>KeyError</li>
+<li>There isn’t really a message; you’re supposed to infer that Friday is not a key in messages.</li>
+</ol>
+
+</details>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## Exercise 9.2 Identifying errors
+
+1. Read the code below, and (without running it) try to identify what the errors are.
+2. Run the code, read the errors and see if you can fix them.
+
+```python
+def another_function
+  print('Syntax errors are annoying.')
+   print('But at least Python tells us about them!')
+  print('So they are usually not too hard to fix.')
+```
+
+<details>
+<summary>Solution
+</summary>
+
+`SyntaxError` for missing `():` and `IndentationError` for mismatch between 2nd and 3rd lines.
 
 </details>
