@@ -308,52 +308,7 @@ Using online help and other resources, explain what each argument to plot does.
 <br>
 
 
-## Exercise 4.1 Computing powers with loops
-Exponentiation is built into Python:
-``` 5 ** 3``` gives `125`
-
-Can you write a loop that would do the same? You may want to use `range`
-
-<details>
-<summary>Solution
-</summary>
-
-```python
-result = 1
-for number in range(0,3):
-    result = result * 5
-print(result)
-```
-
-
-</details>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-## Exercise 4.2 Reverse a string
-Two strings can be concatenated using `+` e.g. `'take' + 'away'` would give `'takeaway'`. Write a loop that takes a string and produces a new string with the characters in reverse order so `Newton` becomes `notweN`.
-
-Hint: create two variables, one for the new string and one for the original. Concatenating adds onto the end of the string, so plan ahead what order you want to add characters from the original string to the new one.
-
-<details>
-<summary>Solution
-</summary>
-
-```python
-newstring = ''
-oldstring = 'Newton'
-for char in oldstring:
-    newstring = char + newstring
-print(newstring)
-```
-
-
-</details>
-
-## Exercise 5.1 Turn a string into a list
+## Exercise 4.1 Turn a string into a list
 Use a for-loop to convert the string `hello` into a list of letters  `['h', 'e', 'l', 'l', 'o']`
 
 Hint: Before your for loop, create an empty list to add characters to like this: `my_list = []`
@@ -376,7 +331,7 @@ print(my_list)
 <br>
 <br>
 
-## Exercise 5.2 Slicing from the end
+## Exercise 4.2 Slicing from the end
 You want to access the last 2 characters of this string and the last 2 entries in this list using the same square brackets. What would need to go inside the square brackets?
 
 ```python
@@ -399,7 +354,7 @@ lst[?:?]
 <br>
 <br>
 
-## Exercise 5.3 Non-continuous slices
+## Exercise 4.3 Non-continuous slices
 You can include a third argument inside the square brackets to set the step size and only take every nth element from the list.
 
 ```python
@@ -433,6 +388,52 @@ How would you get every other element, starting from the second element? i.e.  `
 <br>
 <br>
 <br>
+
+
+## Exercise 5.1 Computing powers with loops
+Exponentiation is built into Python:
+``` 5 ** 3``` gives `125`
+
+Can you write a loop that would do the same? You may want to use `range`
+
+<details>
+<summary>Solution
+</summary>
+
+```python
+result = 1
+for number in range(0,3):
+    result = result * 5
+print(result)
+```
+
+
+</details>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## Exercise 5.2 Reverse a string
+Two strings can be concatenated using `+` e.g. `'take' + 'away'` would give `'takeaway'`. Write a loop that takes a string and produces a new string with the characters in reverse order so `Newton` becomes `notweN`.
+
+Hint: create two variables, one for the new string and one for the original. Concatenating adds onto the end of the string, so plan ahead what order you want to add characters from the original string to the new one.
+
+<details>
+<summary>Solution
+</summary>
+
+```python
+newstring = ''
+oldstring = 'Newton'
+for char in oldstring:
+    newstring = char + newstring
+print(newstring)
+```
+
+
+</details>
 
 ## Exercise 7.1 How many paths?
 
@@ -513,7 +514,7 @@ for char in sentence:
     if char in vowels:
         count += 1
 
-print('The number of vowewls in this string is ' + str(count))
+print('The number of vowels in this string is ' + str(count))
 ```
 
 </details>
