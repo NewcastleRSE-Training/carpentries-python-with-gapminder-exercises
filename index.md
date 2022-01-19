@@ -439,6 +439,7 @@ print(newstring)
 <br>
 <br>
 <br>
+
 ## Exercise 7.1 How many paths?
 
 ```python
