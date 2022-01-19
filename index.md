@@ -376,12 +376,6 @@ How would you get every other element, starting from the second element? i.e.  `
 `primes[1::2]`
 </details>
 
-<br>
-<br>
-<br>
-<br>
-
-![comparisons](fig/comparisons.PNG)
 
 <br>
 <br>
@@ -434,6 +428,22 @@ print(newstring)
 
 
 </details>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## Comparing in Python
+
+`>` : greater than    
+`<` : less than    
+`==` : equal to   
+`!=` : does not equal   
+`>=` : greater than or equal to   
+`<=` : less than or equal to   
+
+
 <br>
 <br>
 <br>
