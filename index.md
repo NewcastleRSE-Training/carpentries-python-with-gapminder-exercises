@@ -463,7 +463,7 @@ Modify this program so that it prints the number of records in the file that has
 ```python
 import glob
 import pandas as pd
-fewest = ____
+fewest = float('Inf')
 for filename in glob.glob('data/*.csv'):
     dataframe = pd.____(filename)
     fewest = min(____, dataframe.shape[0])
