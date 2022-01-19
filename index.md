@@ -434,6 +434,95 @@ print(newstring)
 <br>
 <br>
 
+## Exercise 6.1
+
+Which of these files is not matched by the expression `glob.glob('data/*as*.csv')`?
+
+```python
+data/gapminder_gdp_africa.csv
+data/gapminder_gdp_americas.csv
+data/gapminder_gdp_asia.csv
+```
+
+<details>
+<summary>Solution
+</summary>
+
+1 is not matched by the glob
+
+</details>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## Exercise 6.2 Minimum Files Size
+Modify this program so that it prints the number of records in the file that has the fewest records.
+
+```python
+import glob
+import pandas as pd
+fewest = ____
+for filename in glob.glob('data/*.csv'):
+    dataframe = pd.____(filename)
+    fewest = min(____, dataframe.shape[0])
+print('smallest file has', fewest, 'records')
+```
+
+Note that the `DataFrame.shape()` method returns a tuple with the number of rows and columns of the data frame.
+
+<details>
+<summary>Solution
+</summary>
+
+```python
+ import glob
+import pandas as pd
+fewest = float('Inf')
+for filename in glob.glob('data/*.csv'):
+    dataframe = pd.read_csv(filename)
+    fewest = min(fewest, dataframe.shape[0])
+print('smallest file has', fewest, 'records')
+ ```
+
+</details>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## Exercise 6.3
+Write a program that reads in the regional data sets and plots the average GDP per capita for each region over time in a single chart.
+
+<details>
+<summary>Solution
+</summary>
+ 
+```python
+import glob
+import pandas as pd
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(1,1)
+for filename in glob.glob('data/gapminder_gdp*.csv'):
+    dataframe = pd.read_csv(filename)
+    # extract {region} from the filename, expected to be in the format 'data/gapminder_gdp_{region}.csv'.
+    # we will split the string using the split method and `_` as our separator,
+    # retrieve the last string in the list that split returns (`{region}.csv`), 
+    # and then remove the `.csv` extension from that string.
+    region = filename.split('_')[-1][:-4] 
+    dataframe.mean().plot(ax=ax, label=region)
+plt.legend()
+plt.show()
+```
+</details>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ## Comparing in Python
 
 `>` : greater than    
@@ -508,13 +597,32 @@ Zero, the empty string, and the empty list are considered false; all other numbe
 
 </details>
 
+
+## Exercise 7.3 That's not what I meant
+Sometimes it is useful to check whether some condition is not true. The Boolean operator not can do this explicitly. After reading and running the code below, write some if statements that use not to test the rule that you formulated in the previous challenge.
+
+<details>
+<summary>Solution
+</summary>
+ 
+```python
+if not '':
+    print('empty string is not true')
+if not 'word':
+    print('word is not true')
+if not not True:
+    print('not not True is true')
+```
+ 
+ </details>
+ 
 <br>
 <br>
 <br>
 <br>
 <br>
 
-## Exercise 7.3 Counting vowels
+## Exercise 7.4 Counting vowels
 Write a loop that counts the number of vowels in a character string. Test it on as many different words and sentences as you have time for.
 
 <details>
@@ -540,6 +648,47 @@ print('The number of vowels in this string is ' + str(count))
 <br>
 <br>
 
+## Exercise 7.5 In place operators
+
+Python (and most other languages in the C family) provides in-place operators that work like this:
+
+```
+x = 1  # original value
+x += 1 # add one to x, assigning result back to x
+x *= 3 # multiply x by 3
+print(x)
+```
+
+`6`
+
+Write some code that sums the positive and negative numbers in a list separately, using in-place operators. Do you think the result is more or less readable than writing the same without in-place operators?
+
+<details>
+<summary>Solution
+</summary>
+ 
+```
+positive_sum = 0
+negative_sum = 0
+test_list = [3, 4, 6, 1, -1, -5, 0, 7, -8]
+for num in test_list:
+    if num > 0:
+        positive_sum += num
+    elif num == 0:
+        pass
+    else:
+        negative_sum += num
+print(positive_sum, negative_sum)
+```
+ Here `pass` means “don’t do anything”. In this particular case, it’s not actually needed, since if `num == 0` neither sum needs to change, but it illustrates the use of `elif` and `pass`.
+ 
+ </details>
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Episode 8 Creating Functions
 
