@@ -434,7 +434,11 @@ print(newstring)
 
 
 </details>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 ## Exercise 7.1 How many paths?
 
 ```python
